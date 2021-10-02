@@ -12,6 +12,7 @@ public class Runner {
 		boolean isSame = (connection1 == connection2);
 		boolean isNotSame = (connection1 != connection2);
 		boolean result = (connection1 != connection2);
+		boolean result2 = (connection1 != connection2);
 		System.out.println("isSame : " + isSame);
 	}
 
