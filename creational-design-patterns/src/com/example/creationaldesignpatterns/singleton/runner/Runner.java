@@ -10,7 +10,7 @@ public class Runner {
 		Connection connection1 = JdbcUtil.getConnection();
 		Connection connection2 = JdbcUtil.getConnection();
 		boolean isSame = (connection1 == connection2);
-		System.out.println("isSame : " + isSame);
+		//System.out.println("isSame : " + isSame);
 	}
 
 }
