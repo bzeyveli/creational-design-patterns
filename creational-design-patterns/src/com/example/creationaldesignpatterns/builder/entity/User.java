@@ -2,11 +2,11 @@ package com.example.creationaldesignpatterns.builder.entity;
 
 public class User {
 
-	private int tckn; // required
-	private String lastName; // required
-	private String surName; // required
-	private String email; // opsiyonel
-	private String phone; // opsiyonel
+	private int tckn; 
+	private String lastName; 
+	private String surName; 
+	private String email; 
+	private String phone; 
 
 	public User() {
 
