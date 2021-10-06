@@ -1,6 +1,6 @@
 package com.example.creationaldesignpatterns.staticfactory.constant;
 
-public class RandomFormat {
+public final class RandomFormat {
 	
 	private RandomFormat() {
 		
