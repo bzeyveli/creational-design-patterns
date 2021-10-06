@@ -78,27 +78,27 @@ public class User {
 
 	
 
-		public UserBuilder setTckn(int tckn) {
+		public UserBuilder tckn(int tckn) {
 			this.tckn = tckn;
 			return this;
 		}
 
-		public UserBuilder setLastName(String lastName) {
+		public UserBuilder lastName(String lastName) {
 			this.lastName = lastName;
 			return this;
 		}
 
-		public UserBuilder setSurName(String surName) {
+		public UserBuilder surName(String surName) {
 			this.surName = surName;
 			return this;
 		}
 
-		public UserBuilder setEmail(String email) {
+		public UserBuilder email(String email) {
 			this.email = email;
 			return this;
 		}
 
-		public UserBuilder setPhone(String phone) {
+		public UserBuilder phone(String phone) {
 			this.phone = phone;
 			return this;
 		}
