@@ -55,7 +55,6 @@ public class User {
 		private String email;
 		private String phone;
 
-	
 
 		public UserBuilder tckn(int tckn) {
 			this.tckn = tckn;
