@@ -1,0 +1,106 @@
+
+  Servlet 
+  
+  Sunucu tarafından çağrılan derlenmiş java nesnesidir. 
+  Bu nesne uygulama sunucusu tarafından bytcoda çevrilir. 
+  Gelen Http isteklerini uygulama sunucusu üzerinde çalışan Servlet Engine(servlet Motor) tarafından incelenir ve ilgili servletler çağrılır.
+  Çalıştırılan istekler servlet motoru tarafından değerlendirilir ve Htpp cevaplarına (response) dönüştürülür. Böylece uzaktaki Java nesnesini Http aracılığıyla çalıştırmış oluruz.
+  Servlet motorlarının multi-thread çalışma sistemi vardır. 
+
+  Jsp (Java Server Pages)  
+  
+  Html dosyaları için Script olarak yazılmış Java komutlarında oluşan JAVA EE API kütüphanesidir.
+   Bu scpritler uygulama sunucunda bulunan Jsp Motorları tarafından çalışma zamanında servlet'lere çevrilir. Çevrilen Jsp komutları servlet motorları tarafında işlem görür ve sonuc html sayfasında görüntülenir.
+  Uygulama geliştirme ve performans açısından avantajlıdır fakat kod okunabilirliği açısından dezavantajlıdır.
+
+  <%@page contentType="text/html" pageEncoding="UTF-8"%>
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <meta charset="UTF-8">
+          <title><% out.println("Merhaba JSP");%></title>
+      </head>
+      <body>
+          <h1><% out.println("Merhaba JSP");%></h1>
+      </body>
+  </html>
+
+
+  Structs 
+  
+  Jakarta projesi altında geliştirilen MVC tabanlı Java Web uygulamaları geliştirmede bir standart belirlemek amacıyla tasarlanmış ve açık kaynak kodlu bir teknolojidir. 
+  MVC örüntüsü üç katmandan oluşur:
+  Model kısmını JavaBean’ler oluşturur.
+  View kısmını  Jsp veya Facelets oluşturur.
+  Controller kısmını  : ActionServlet oluşturur.
+  Kullanım Amacı :
+  •	Jsp sayfalarında bulunan Java kodlarını en aza indirir.
+  •	Jsp sayfalarında iş mantığını barındıran kodların bulunmasını engellemektedir.
+  •	Arayüz tasarımcısının tasarıma yoğunlaşmasını sağlar.
+  •	Web tabanlı uygulamalarda olay akışının tek bir XML dosyası üzerinden kontrol edilmesini sağlar.
+  •	UTF-8 kodlamasına destek vermektedir. 
+  •	Yaygın olarak kullanılan form kontrolleri tanımlanmış olarak gelir. (e-posta adresi, boşluk sayısı vb)
+
+  Spring
+  
+  Hem kurumsal uygulamalarda hem de standart uygulamalarda kullanılabilen bir teknolojidir. ORM (Object Relational Mapping) desteği, Annotation desteği, Dependency Injection gibi özellikler sunar. Ayrıca rutin işlemleri arka planda hallederek hız, performans ve kullanım kolaylığı sağlar. 
+         Spring Framework’ün Avantajları : 
+  •	POJO kullanarak kurumsal bir  yapı oluşturmamızı ve yönetmemizi sağlar.
+  •	Spring kullanılmış projelerde test sınıfı yazmak ve kullanmak kolaydır.
+  •	Spring kullanırken projenin büyüklüğü önemli değildir. Her projeye uygulanabilir.
+  •	Spring modüler olarak geliştirilmiştir,  projede ihtiyacımız olan modülleri kullanmamız yeterli olacaktır.
+  •	Spring, singleton ve fabrika sınıflarının oluşturulmasını ortadan kaldırır.
+  •	Spring, Xml ve açıklama yapılandırmalarını destekler.
+
+  Spring’in Kullanım Alanları :
+  •	Web uygulaması geliştirme
+  •	Özellikleri herhangi bir Java uygulaması oluşturmak için kullanılabilir
+  •	Ayrıca Enterprise Java'da (JEE) kullanılır.
+
+  POJO (PLAIN OLD JAVA OBJECTS) : Java sınıfları tanımlamak için kullanılır. POJO’nun sahip olması gereken özellikler : 
+  •	Sadece üye değişkenler ve bunlara ait get ve set metodlarından oluşur.
+  •	POJO özelliğine sahip sınıflar herhangi bir sınıfı extend etmezler.
+  •	POJO özelliğine sahip sınıflar herhangi bir arayüzü implement etmezler.
+  •	Bu sınıflar anotation içermezler.
+
+  Hibernate 
+  
+  Java geliştiriciler için geliştirilmiş bir ORM kütüphanesidir. Veritabanındaki tablolarımızla, bu tablolardaki verileri tutan sınıfları eşleştirip, sınıflar üzerinden veritabanındaki nesneleri hızlıca map ederek CRUD işlemlerini yapmamızı sağlar. 
+  Avantajları :
+  •	XML dosyalarını kullanarak ve tek bir satır kod yazmadan java sınıflarını veritabanı tablolarına map eder.
+  •	Veritabanından direk olarak java objesini almak ya da veritabanında saklamak için basit API’ler sağlar.
+  •	Eğer veritabanı değişir veya herhangi bir tablo değişirse XML dosyasının özelliklerini değiştirmek yeterli olacaktır.
+  •	SQL’ den kurtarır, bir java projesi olarak çalışmasını sağlar.
+  •	Çalışmak için uygulama sunucusuna ihtiyaç duymaz.
+  •	Basit veri sorgusu sağlar.
+  
+  INSERT INTO tablo(ad, soyad, sehir) VALUES (“Bekir” , “Zeyveli”, “Malatya”)  gibi bir veri yığınını kullanmak yerine session.save(person); komutuyla nesne mantığından uzaklaşmadan kullanılır.
+
+  Hibarnate’yi kullanırken bizim veri taşıyıcılarına ihtiyacımız bulunmaktadır. Bu veri taşıyıcıları Plain old java object denilen ve POJO adı ile bilinen Java nesnesidir. Pojo bir bakıma Bean’dir. Pojo’muzu kullanmak için Hibernate’nin hangi veritabanına nasıl işleneceğini XML dosyasında beliritilir.
+
+  GWT (Google Web Toolkit)
+  
+  Az bilgi ile kullanıcı arayüzleri oluşturmayı sağlayan açık kaynak kodludur.  Temel olarak Java kodunu tarayıcı dostu paketlere dönüştürür. 
+ 
+  •	GWT, geliştiricilere JAVA'da istemci tarafı uygulama yazma seçeneği sunar.
+  •	GWT, JAVA'da yazılan kodu JavaScript koduna derler.
+  •	GWT ile yazılmış uygulama, tarayıcılar arası uyumludur. GWT, her tarayıcıya uygun javascript kodunu otomatik olarak oluşturur.
+  •	GWT açık kaynaklıdır, tamamen ücretsizdir ve dünya çapında binlerce geliştirici tarafından kullanılmaktadır. 
+  •	GWT, Junit ve Maven ile kolay entegrasyon sağlar.
+  •	Yine Java tabanlı olan GWT, Java Geliştiricileri için düşük bir öğrenme eğrisine sahiptir.
+  •	GWT, optimize edilmiş javascript kodu üretir, tarayıcının özel javascript kodunu kendi kendine üretir.
+  •	GWT, Widget kitaplığını bir uygulamada gerekli olan görevlerin çoğunu sağlar.
+  •	GWT genişletilebilir ve uygulama gereksinimlerini karşılamak için özel widget oluşturulabilir.
+
+
+  Vaadin
+
+  GWT üzerine kurulmuş server-side web programlama framework’üdür. ( GWT temelde javascript derleyicisidir.) Açık kaynak kodludur. İş Uygulamaları için web kullanıcı arayüzlerini hızlı bir şekilde geliştirmek için tasarlanmıştır. Bakımı kolay, yeniden kullanılabilir bileşenler oluşturmayı kolaylaştır.
+
+  Vaadin, Java kullanılarak oluşturulmuştur. Ayrıca, geliştiricinin web sayfasını geliştirmek için biçimlendirme dillerini kullanmasına gerek yoktur. Vaadin ayrıca Google Web araç setini kullanarak her türlü desteği sağlar.
+
+  Vaadin, herhangi bir geleneksel web teknolojisine kıyasla birçok bileşen, düzen ve farklı dinleyici sağlar; bu nedenle Vaadin kullanmak daha çok tercih edilir.
+
+  Vaadin Java tabanlı olduğu için tamamen Nesne yönelimlidir. Bir Java geliştiricisi, yalnızca Vaadin sınıfları ve kullanımları hakkında fikir sahibi olarak kolayca bir web sitesi geliştirebilir.
+
+  Vaadin eklenti destekleri sağlar ve öğrenmesi ve diğer web çerçeveleriyle entegrasyonu çok kolaydır.
